@@ -105,6 +105,10 @@ The main policy sweep focuses on four representative fault settings selected fro
 
 TRR is swept over critical and non-critical disturbance thresholds. PARA is swept over critical and non-critical protection probabilities.
 
+### Evaluation Focus
+
+RowHammer mitigation naturally exposes a three-way trade-off among critical-region protection, non-critical reliability, and timing overhead. This project focuses on the security-prioritized setting: critical-region protection is treated as the primary objective, while non-critical flips are measured but treated as a secondary outcome rather than a selection constraint.
+
 ## Mitigation Policies
 
 ### Uniform TRR
