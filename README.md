@@ -212,7 +212,7 @@ These limitations are intentional. The goal is to create a controlled simulation
 
 The full project report is available here:
 
-[`security-aware-rowhammer-mitigation-report.pdf`](./security-aware-rowhammer-mitigation-report.pdf)
+[`Security_Aware_RowHammer_Mitigation.pdf`](./Security_Aware_RowHammer_Mitigation.pdf)
 
 ## Tool
 
