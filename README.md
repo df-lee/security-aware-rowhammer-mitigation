@@ -21,7 +21,7 @@ The project compares four mitigation policies under the same logical fault model
 <div align="center">
 
 | Policy Family | Uniform Version | Security-Aware Version | Main Control Knob |
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 | Target Row Refresh | Uniform TRR | Security-Aware TRR | Disturbance threshold |
 | Probabilistic Adjacent Row Activation | Uniform PARA | Security-Aware PARA | Protection probability |
 
@@ -74,7 +74,7 @@ Before tuning mitigation policies, the project sweeps fault-model parameters to 
 <div align="center">
 
 | Parameter | Values |
-|---|---|
+|:---:|:---:|
 | Hammer Threshold | `{1, 2, 3, 4}` |
 | Probabilistic Flip Onset | `{1, 2, 3, 4}` |
 | Probability Function | Sigmoid |
@@ -95,7 +95,7 @@ The main policy sweep focuses on four representative fault settings selected fro
 <div align="center">
 
 | Tag | Hammer | Onset | Function | Rows |
-|---|---:|---:|---|---:|
+|:---:|:---:|:---:|:---:|:---:|
 | S64-S1 | 1 | 1 | Sigmoid | 64 |
 | S128-S1 | 1 | 1 | Sigmoid | 128 |
 | L64-S1 | 1 | 1 | Linear | 64 |
@@ -182,7 +182,7 @@ This makes PARA useful when the goal is to deliberately spend extra maintenance 
 <div align="center">
 
 | Family | Setting | Parameters | Critical Flips | Avg. Read Latency | Cycles |
-|---|---|---|---:|---:|---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 | TRR | S64-S1 | `tc = 3, tn = 10` | 0 | 95.26 | 188082 |
 | TRR | S128-S1 | `tc = 3, tn = 10` | 0 | 81.29 | 187965 |
 | TRR | L64-S1 | `tc = 4, tn = 10` | 2 | 68.07 | 187910 |
@@ -207,14 +207,3 @@ The broader fault-model sweep also shows that not every parameter setting is equ
 This project uses a logical RowHammer disturbance model rather than a circuit-level DRAM physics model. The row-space compression knob is an experimental stress mechanism, not a native DRAM remapping feature. The timing-aware maintenance path is also a first-order surrogate: it exposes controller-level overhead trends, but it should not be interpreted as a complete implementation of vendor-specific targeted refresh.
 
 These limitations are intentional. The goal is to create a controlled simulation framework for comparing security-aware mitigation policies under consistent assumptions.
-
-## Suggested Citation
-
-```bibtex
-@misc{li2026securityawarerowhammer,
-  title  = {Security-Aware RowHammer Mitigation in a DRAM Model},
-  author = {Zefu Li},
-  year   = {2026},
-  note   = {Course project, University of Pennsylvania}
-}
-```
