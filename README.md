@@ -207,3 +207,13 @@ The broader fault-model sweep also shows that not every parameter setting is equ
 This project uses a logical RowHammer disturbance model rather than a circuit-level DRAM physics model. The row-space compression knob is an experimental stress mechanism, not a native DRAM remapping feature. The timing-aware maintenance path is also a first-order surrogate: it exposes controller-level overhead trends, but it should not be interpreted as a complete implementation of vendor-specific targeted refresh.
 
 These limitations are intentional. The goal is to create a controlled simulation framework for comparing security-aware mitigation policies under consistent assumptions.
+
+## Report
+
+The full project report is available here:
+
+[`security-aware-rowhammer-mitigation-report.pdf`](./security-aware-rowhammer-mitigation-report.pdf)
+
+## Tool
+
+- [Ramulator2](https://github.com/CMU-SAFARI/ramulator2)
